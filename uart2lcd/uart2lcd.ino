@@ -77,9 +77,9 @@ void loop(){
         tft.setCursor(0, 0);
       }
       tmp = Serial.read();
-      if(tmp == 0)
+      if(tmp >= 0x00 && tmp <= 0x0f)
       {
-        tft.print(tmp, HEX);
+        tft.print(0, HEX);
         tft.print(tmp, HEX);
       }
       else
